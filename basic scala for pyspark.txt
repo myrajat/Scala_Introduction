@@ -1,0 +1,111 @@
+/**
+  * Created by HP-PC on 07-04-2021.
+  */
+/*Welcome program*/
+object lecture1 {
+  def main(args: Array[String]): Unit = {
+    println("Hello world")
+  }
+}
+
+/*Variables*/
+object two {
+  def main(args: Array[String]): Unit = {
+    var data:Any="Hadoop"
+    val data1 = 100
+    data=200
+    println("welcome to banglore")
+    println(data)
+    println(data1)
+  }
+}
+
+/*Loading file from externnal source*/
+//object test1 {
+//  def main(args: Array[String]): Unit = {
+//    val rajat = scala.io.Source.fromFile("C:\Users\HP-PC\Desktop\t1.txt")
+//  }
+//}
+
+
+/*Lazy*/
+object laz {
+  def main(args: Array[String]): Unit = {
+   lazy val data = {println("Hello Rajat");200;220;3000}
+   lazy val data1 = {println("Hello Banglore");300}
+    println(data)
+    println(data1)
+    println("welcome to banglore")
+  }
+}
+
+/*Wothout Lazy*/
+
+object Nonlaz {
+  def main(args: Array[String]): Unit = {
+   val data = {println("Hello Rajat");200;220;3000}
+   val data1 = {println("Hello Banglore");300}
+    println(data)
+    println(data1)
+    println("welcome to banglore")
+  }
+}
+
+
+/*Pattern Matching*/
+object today5 {
+  def main(args: Array[String]): Unit = {
+    var data = 3
+    data match {
+      case 1 => println("yes")
+      case 2 => println("Maybe")
+      case 3 => println("Definatly Yes")
+      case _ => println("India is my country so be happy")
+    }
+  }
+}
+
+/*List*/
+object test1 {
+  def main(args: Array[String]): Unit = {
+    val data = List("sunday","monday","tuesday","wednesday","thursday","friday","hadoop","jave","Lehsun")
+     data match{
+
+                case  head::tail=>
+                  println(tail)
+
+         val data1= List("java","python","Hive")
+
+          var t1=data:::data1
+                  println(t1)
+
+
+         data1.isEmpty
+
+         var t2=data.zip(data1)               /*zip function*/
+         println(t2)
+     }
+  }
+
+}
+
+object Text24 {
+
+  def main(args: Array[String]): Unit = {
+
+    var data = Map(("W","Bangalore"),(100,"Pune"),("java",300))
+
+    var data2 = Map(10->"Big Data & Hadoop","T"->"USA")
+
+    println(data)
+    println(data2)
+
+    println(data(100))
+
+    var t1 = data2+("spark"->"Hello India")
+    println(t1)
+
+    val t2 = data2-(data2("T"))
+    println(t2)
+  }
+}
